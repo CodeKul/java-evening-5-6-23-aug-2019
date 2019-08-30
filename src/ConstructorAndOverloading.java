@@ -9,24 +9,45 @@ public class ConstructorAndOverloading {
     }
 
     ConstructorAndOverloading( // parameterized
-            int col,
-            String cont
+                               int col,
+                               String cont
+
     ) {
+        this(); // calling default constructor
+
         this.col = col;
         this.cont = cont;
     }
 
     ConstructorAndOverloading( //copy constructor
-            ConstructorAndOverloading con
+                               ConstructorAndOverloading con
     ) {
         this.cont = con.cont;
         this.col = con.col;
     }
 
-    public static void main(String[] args) {
-         ConstructorAndOverloading co =
-                 new ConstructorAndOverloading(89,"s");
+    void add(int num1, int num2) {
+        System.out.println("Addition is " + (num1 + num2));
+    }
 
-         new ConstructorAndOverloading(co);
+    int add(double num1, int num2) {
+        System.out.println("Addition is " + (num1 + num2));
+        return  0;
+    }
+
+    void add(int num1, int num2, int num3) {
+        System.out.println("Addition is " + (num1 + num2+num3));
+    }
+
+    public static void main(String[] args) {
+
+        new ConstructorAndOverloading();
+
+        ConstructorAndOverloading co =
+                new ConstructorAndOverloading(89, "s");
+        co.add(56, 89);
+        co.add(89,78,52);
+
+        new ConstructorAndOverloading(co);
     }
 }
