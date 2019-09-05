@@ -1,3 +1,7 @@
+package basics;
+
+import loops.Loops;
+
 public class Main {
 
     // state
@@ -7,6 +11,8 @@ public class Main {
     Main() {
        date = 45;
        nm = "Android";
+
+        Loops lp = new Loops();
     }
 
     // behaviour

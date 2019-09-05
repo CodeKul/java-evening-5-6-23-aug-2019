@@ -1,3 +1,5 @@
+package datatypes;
+
 import java.util.ArrayList;
 
 public class DataTypes {

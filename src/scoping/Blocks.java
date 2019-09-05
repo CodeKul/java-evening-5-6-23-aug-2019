@@ -1,3 +1,5 @@
+package scoping;
+
 public class Blocks {
 
     int objAcc = 10;
