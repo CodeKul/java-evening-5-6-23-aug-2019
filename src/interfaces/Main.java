@@ -1,5 +1,7 @@
 package interfaces;
 
+import inheritance.Car;
+
 public class Main {
 
     Animal an; // containment inheritance -has a relationship
@@ -17,5 +19,8 @@ public class Main {
         * 2. if animal is concrete, still above line will be an error why ?
         * because every tiger is an animal, but every animal is not tiger
          * **/
+
+
+
     }
 }
