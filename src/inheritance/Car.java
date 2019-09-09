@@ -37,4 +37,24 @@ public class Car {
     public void setCost(int cost) {
         this.cost = cost;
     }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "make='" + make + '\'' +
+                ", cost=" + cost +
+                ", col='" + col + '\'' +
+                ", wheels=" + wheels +
+                ", engine=" + engine +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
 }
+
+
+//final class Hi extends Car { }
+//class Hello extends Hi { }

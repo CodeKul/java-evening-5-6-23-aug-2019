@@ -16,6 +16,15 @@ public class Main {
         bmw.speedUp();
         bmw.wheels = 4;
 
+        Object obj = new Car();
+
         Car cr = new Car();
+        System.out.println(
+                cr.equals(new Car())
+        );
+        ;;;;;;;;;;;;;;;;;;
+
+        System.out.println(Main.class);
     }
+
 }
