@@ -1,6 +1,8 @@
 package exception;
 
-import java.nio.file.FileAlreadyExistsException;
+import exception.custom.NotFromAException;
+
+import java.lang.reflect.Field;
 
 public class Main {
 
@@ -25,12 +27,35 @@ public class Main {
         Class.forName("java.lang.Math");
     }
 
-    public static void main(String[] args) throws Exception {
+    public void myEx(String nm) throws NotFromAException{
+
+        Class cls = NotFromAException.class;
+        System.out.println("Canonical Name "+cls.getCanonicalName());
+        System.out.println("Name "+cls.getName());
+        System.out.println("Simple Name "+cls.getSimpleName());
+        Field []arr =  cls.getDeclaredFields();
+        for ( Field fld : arr) {
+            System.out.println("Your Field Name is "+fld.getName());
+        }
+
+        if(!nm.startsWith("a") || !nm.startsWith("A") ) {
+            throw new NotFromAException(nm);
+        }
+    }
+
+    public static void main(String[] args)  {
 
         Main m = new Main();
-        m.firstType();
-        m.secondType();
-        System.out.println("Error");
+        m.myEx("java");
+//        m.firstType();
+//
+//        try {
+//            m.secondType();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        System.out.println("Error");
+
 
     }
 }
